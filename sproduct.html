@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+  </head>
+  <body>
+    <section id="Header">
+      <a href="#">
+        <img src="img/logo.png" class="logo" alt="" />
+      </a>
+      <div>
+        <ul id="navbar">
+          <li><a href="index.html"class="active">Home</a></li>
+          <li><a href="quiz.html">Know Your Plants</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" >Contact Us</a></li>
+          <li>
+            <a href="Cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+          </li>
+          <a href="#" id="close"> <i class="fa-solid fa-x"></i></a>
+        </ul>
+      </div>
+      <div id="mobile">
+        <i id="bar" class="fas fa-outdent"></i>
+      </div>
+    </section>
+
+    <section id="prodetails" class="section-p1">
+      <div class="single-pro-image">
+        <model-viewer src="3d models/generic_tulip_flower.glb" alt="3D Plant Model"
+        auto-rotate
+        camera-controls
+        style="width: 100%; height: 100%;"  class="small-img">
+      </model-viewer>
+        <div class="small-image-group">
+          <div class="small-img-col">
+            <model-viewer src="3d models/lavender_bliss_0904153723 (1).glb" alt="3D Plant Model"
+        auto-rotate
+        camera-controls
+        style="width: 100%; height: 100%;"  class="small-img">
+      </model-viewer>
+          </div>
+          <div class="small-img-col">
+            <model-viewer src="3d models/mint_with_lebel.glb" alt="3D Plant Model"
+        auto-rotate
+        camera-controls
+        style="width: 100%; height: 100%;"  class="small-img">
+      </model-viewer>
+          </div>
+          <div class="small-img-col">
+            <model-viewer src="3d models/moringa.glb" alt="3D Plant Model"
+        auto-rotate
+        camera-controls
+        style="width: 100%; height: 100%;"  class="small-img">
+      </model-viewer>
+          </div>
+          <div class="small-img-col">
+            <model-viewer src="3d models/aloe_vera_plant_in_3d_printed_pot.glb" alt="3D Plant Model"
+        auto-rotate
+        camera-controls
+        style="width: 100%; height: 100%;"  class="small-img">
+      </model-viewer>
+          </div>
+        </div>
+      </div>
+      <div class="single-pro-details">
+        <h1>Plant Name: Generic Tulip Flower</h1>
+        <p>This beautiful tulip flower is known for its vibrant colors and elegant petals. It is a symbol of spring and renewal. Perfect for adding a touch of nature to any environment.</p>
+        <h2>Plant Details</h2>
+        <ul>
+          <li><strong>Scientific Name:</strong> Tulipa</li>
+          <li><strong>Family:</strong> Liliaceae</li>
+          <li><strong>Origin:</strong> Central Asia</li>
+          <li><strong>Growth Habit:</strong> Bulbous perennial</li>
+          <li><strong>Preferred Climate:</strong> Temperate</li>
+          <li><strong>Flower Colors:</strong> Red, yellow, pink, white, and more</li>
+        </ul>
+      </div>
+    </section>
+
+  
+    <section id="Newsletter" class="section-p1">
+      <div class="newstext">
+        <h4>Sign Up for Newsletter</h4>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum,
+          reprehenderit.
+        </p>
+      </div>
+      <div class="form">
+        <input type="text" placeholder="Your Email" />
+        <button><a href="signup_index.html">Sign up</a></button>
+      </div>
+    </section>
+
+    <footer class="section-p1">
+      <div class="col">
+        <img class="logo" src="img/logo.png" alt="" />
+        <h4>Contact</h4>
+        <p>
+          <strong>Address : </strong> Lorem ipsum dolor, sit amet consectetur
+          adipisicing elit. A, odio.
+        </p>
+        <p><strong>Phone : </strong>+91 8279298996</p>
+        <p><strong>Hours : </strong>10:00-18:00,Mon - Sat</p>
+        <div class="follow">
+          <h4>Follow Us</h4>
+          <div class="icon">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-pinterest-p"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <h4>About</h4>
+        <a href="">About</a>
+        <a href="">Delivery Information</a>
+        <a href="">Privacy Policy</a>
+        <a href="">Terms & Conditions</a>
+        <a href="">Contact Us</a>
+      </div>
+      <div class="col">
+        <h4>My Account</h4>
+        <a href="">Sign in</a>
+        <a href="">View Cart</a>
+        <a href="">My Wishlist</a>
+        <a href="">Track My order</a>
+        <a href="">help</a>
+      </div>
+
+      <div class="col install">
+        <h4>Install app</h4>
+        <p>From App Store or Google Play</p>
+        <div class="row">
+          <a href="https://www.apple.com/in/app-store/"
+            ><img src="img/pay/app.jpg" alt=""
+          /></a>
+          <a href="https://play.google.com/store/games?hl=en&gl=US&pli=1"
+            ><img src="img/pay/play.jpg" alt=""
+          /></a>
+        </div>
+        <p>Secured Payment Gateways</p>
+        <img src="img/pay/pay.png" alt="" />
+      </div>
+      <div class="copyright">
+        <p>2024, Triyagyoni E-Commerce</p>
+      </div>
+    </footer>
+    <script>
+      var main_img = document.getElementById("mainImag")
+      var small_img = document.getElementsByClassName("small-img")
+      small_img[0].onclick = function (){
+        main_img.src = small_img[0].src;
+      }
+      small_img[1].onclick = function (){
+        main_img.src = small_img[1].src;
+      }
+      small_img[2].onclick = function (){
+        main_img.src = small_img[2].src;
+      }
+      small_img[3].onclick = function (){
+        main_img.src = small_img[3].src;
+      }
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>

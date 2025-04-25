@@ -1,0 +1,50 @@
+/* Set full-screen height */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Container for the 3D model and plant information */
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  /* Left side: 3D model section */
+  .model-section {
+    flex: 1; /* Take up 50% of the screen */
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Right side: Plant information section */
+  .info-section {
+    flex: 1; /* Take up 50% of the screen */
+    padding: 20px;
+    background-color: #fff;
+    color: #333;
+    overflow-y: auto;
+  }
+  
+  /* Information styling */
+  h1, h2 {
+    margin-top: 0;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+  }
+  
+  ul li strong {
+    font-weight: bold;
+  }
+  

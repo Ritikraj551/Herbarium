@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herbal Garden Quiz</title>
+    <link rel="stylesheet" href="qustyle.css"> <!-- External CSS link -->
+</head>
+<body>
+    <section id="Header">
+        <a href="#" >
+          <img src="img/logo.png" class="logo" alt="" />
+        </a>
+        <div>
+          <ul id="navbar">
+            <li><a href="index.html"class="active">Home</a></li>
+            <li><a href="quiz.html">Know Your Plants</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" >Contact Us</a></li>
+            <li>
+              <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+            </li>
+            <a href="#" id="close"> <i class="fa-solid fa-x"></i></a>
+          </ul>
+        </div>
+        <div id="mobile">
+          <i id="bar" class="fas fa-outdent"></i>
+        </div>
+      </section>
+
+    <header>
+        <h1>Herbal Garden Quiz</h1>
+        <h4>Test your knowledge about medicinal plants!</h4>
+    </header>
+
+    <section class="quiz-container">
+        <form id="quiz-form">
+            <!-- Question 1 -->
+            <div class="question" id="q1-container">
+                <h3>1. Which plant is known for its healing properties for skin burns?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="A"> Aloe Vera</label><br>
+                    <label><input type="radio" name="q1" value="B"> Mint</label><br>
+                    <label><input type="radio" name="q1" value="C"> Lavender</label><br>
+                    <label><input type="radio" name="q1" value="D"> Basil</label><br>
+                </div>
+                <p class="feedback" id="q1-feedback"></p>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question" id="q2-container">
+                <h3>2. Which herb is famous for its calming effect and is often used in aromatherapy?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="A"> Chamomile</label><br>
+                    <label><input type="radio" name="q2" value="B"> Rosemary</label><br>
+                    <label><input type="radio" name="q2" value="C"> Lavender</label><br>
+                    <label><input type="radio" name="q2" value="D"> Mint</label><br>
+                </div>
+                <p class="feedback" id="q2-feedback"></p>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question" id="q3-container">
+                <h3>3. Which plant is commonly used to treat digestive issues?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="A"> Ginger</label><br>
+                    <label><input type="radio" name="q3" value="B"> Mint</label><br>
+                    <label><input type="radio" name="q3" value="C"> Thyme</label><br>
+                    <label><input type="radio" name="q3" value="D"> Eucalyptus</label><br>
+                </div>
+                <p class="feedback" id="q3-feedback"></p>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question" id="q4-container">
+                <h3>4. Which plant is well-known for its use in treating insomnia?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="A"> Basil</label><br>
+                    <label><input type="radio" name="q4" value="B"> Lemon Balm</label><br>
+                    <label><input type="radio" name="q4" value="C"> Lavender</label><br>
+                    <label><input type="radio" name="q4" value="D"> Chamomile</label><br>
+                </div>
+                <p class="feedback" id="q4-feedback"></p>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question" id="q5-container">
+                <h3>5. Which plant is used as a natural remedy to help boost memory?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="A"> Rosemary</label><br>
+                    <label><input type="radio" name="q5" value="B"> Peppermint</label><br>
+                    <label><input type="radio" name="q5" value="C"> Basil</label><br>
+                    <label><input type="radio" name="q5" value="D"> Sage</label><br>
+                </div>
+                <p class="feedback" id="q5-feedback"></p>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="submit-container">
+                <button type="button" class="submit-btn" onclick="submitQuiz()">Submit Quiz</button>
+            </div>
+        </form>
+
+        <!-- Scorecard -->
+        <div id="scorecard" class="hidden">
+            <h2>Your Score</h2>
+            <p id="score"></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Triyagyoni E-Commerce.</p>
+    </footer>
+
+    <script>
+        const correctAnswers = {
+            q1: "A",
+            q2: "C",
+            q3: "A",
+            q4: "D",
+            q5: "A"
+        };
+
+        function submitQuiz() {
+            let totalQuestions = 5;
+            let score = 0;
+
+            for (let i = 1; i <= totalQuestions; i++) {
+                const selectedOption = document.querySelector(`input[name="q${i}"]:checked`);
+                const feedbackEl = document.getElementById(`q${i}-feedback`);
+                const correctAnswer = correctAnswers[`q${i}`];
+
+                if (selectedOption) {
+                    const answer = selectedOption.value;
+                    if (answer === correctAnswer) {
+                        feedbackEl.innerHTML = `Correct!`;
+                        feedbackEl.style.color = "green";
+                        score++;
+                    } else {
+                        feedbackEl.innerHTML = `Wrong! The correct answer is ${correctAnswer}.`;
+                        feedbackEl.style.color = "red";
+                    }
+                } else {
+                    feedbackEl.innerHTML = `No answer selected! The correct answer is ${correctAnswer}.`;
+                    feedbackEl.style.color = "red";
+                }
+            }
+
+            // Show the scorecard with the final score
+            document.getElementById('score').innerHTML = `You scored ${score} out of ${totalQuestions}.`;
+            document.getElementById('scorecard').classList.remove('hidden');
+        }
+    </script>
+
+</body>
+</html>
